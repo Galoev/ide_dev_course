@@ -1,0 +1,17 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>galoev.pascal</id>
+    <name>Pascal</name>
+    <vendor>Galoev</vendor>
+
+    <description><![CDATA[
+      Pascal language support for IntelliJ IDEA.
+    ]]></description>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+</idea-plugin>
