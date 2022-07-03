@@ -12,6 +12,15 @@ plugins {
 group = properties("pluginGroup")
 version = properties("pluginVersion")
 
+idea.module.generatedSourceDirs.plusAssign(file("gen"))
+
+sourceSets {
+    main {
+        java.setSrcDirs(listOf("src/main", "src/test", "gen"))
+    }
+}
+
+
 // Configure project's dependencies
 repositories {
     mavenCentral()
@@ -50,7 +59,7 @@ tasks {
     }
 
     val lexer by registering(org.jetbrains.grammarkit.tasks.GenerateLexer::class) {
-        source = "$project.projectDir/src/main/kotlin/com/galoev/pascal/lang/_PascalLexer.flex"
+        source = "${project.projectDir}/src/main/kotlin/com/galoev/pascal/lang/_PascalLexer.flex"
         targetDir = "gen/com/galoev/pascal/lexer"
         targetClass = "PascalLexerGenerated"
     }
@@ -61,6 +70,7 @@ tasks {
 }
 
 dependencies {
+    implementation("org.jetbrains:annotations:17.0.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
     testImplementation(platform("org.junit:junit-bom:5.8.0"))
 }
