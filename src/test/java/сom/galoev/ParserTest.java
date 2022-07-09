@@ -41,7 +41,7 @@ public class ParserTest {
 
     @Test
     public void testSimpleExpression() throws Exception {
-        assertEquals(new BinaryExpression(new Variable('a'), new Literal('4'), Token.Type.MULTIPLY),
+        assertEquals(new BinaryExpression(new Literal('4'), new Variable('a'), Token.Type.MULTIPLY),
                     parser.parse(lexer.getTokens("a * 4")));
     }
 
