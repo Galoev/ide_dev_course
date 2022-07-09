@@ -1,0 +1,7 @@
+PascalTokenType.STRING (''This is a pascal string'')
+WHITE_SPACE ('\n')
+PascalTokenType.STRING ('''')
+WHITE_SPACE ('\n')
+PascalTokenType.STRING (''a'')
+WHITE_SPACE ('\n')
+PascalTokenType.STRING (''the string starts here\n   and continues here'')
