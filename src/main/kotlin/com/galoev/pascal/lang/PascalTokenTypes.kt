@@ -85,5 +85,10 @@ class PascalTokenType(@NonNls debugName: String) : IElementType(debugName, Pasca
         val TYPES = TokenSet.create(INTEGER, REAL, BOOLEAN, CHAR)
         val NUMBERS = TokenSet.create(NUM_INT, NUM_HEX, NUM_REAL)
         val PARENS = TokenSet.create(LPAREN, RPAREN)
+        val COMMENTS = TokenSet.create(COMMENT)
+        val STRINGS = TokenSet.create(STRING)
+        val RELATIONAL_OPERATORS = TokenSet.create(EQ, NEQ, GT, LT, GTEQ, LTEQ, IN)
+        val ADDING_OPERATORS = TokenSet.create(PLUS, MINUS, OR, XOR)
+        val MULTIPLYING_OPERATORS = TokenSet.create(MULT, DIV, DDIV, MOD, AND, SHR, SHL)
     }
 }
