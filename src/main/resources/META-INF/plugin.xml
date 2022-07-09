@@ -12,6 +12,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="Pascal" language="Pascal" implementationClass="com.galoev.pascal.lang.PascalFileType" extensions="pas;pp;inc" fieldName="INSTANCE"/>
+        <lang.parserDefinition language="Pascal" implementationClass="com.galoev.pascal.lang.PascalParserDefinition"/>
         <lang.syntaxHighlighterFactory language="Pascal" implementationClass="com.galoev.pascal.ide.PascalSyntaxHighlighterFactory"/>
         <colorSettingsPage implementation="com.galoev.pascal.ide.PascalColorSettingsPage"/>
     </extensions>
